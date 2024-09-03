@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         body {
-            background: #ABCDEF;
+            background: #white;
             font-family: Assistant, sans-serif;
             display: flex;
             min-height: 90vh;
@@ -143,9 +143,6 @@
         </div>
     </section>
     <footer>
-        <p>Made with <span class='heart'>&hearts;</span> by Bridges(<a
-                href='https://github.com/mateuspntx'>@pxntxs</a>)</p>
-        <p>Gradient: <a href='https://uigradients.com/#Turquoiseflow'>https://uigradients.com/#Turquoiseflow</a></p>
     </footer>
 
     <script>

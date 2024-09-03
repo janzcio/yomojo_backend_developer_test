@@ -15,5 +15,3 @@ Route::get('/customers', [CustomerController::class, 'index'])->name('web.custom
 Route::get('/customers/create', [CustomerController::class, 'create'])->name('web.customers.create');
 Route::get('/customers/{customer}', [CustomerController::class, 'show'])->name('web.customers.show');
 Route::get('/customers/{customer}/edit', [CustomerController::class, 'edit'])->name('web.customers.edit');
-
-Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');

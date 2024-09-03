@@ -4,9 +4,9 @@
 
 @section('content')
     <div class="container mt-5">
-        <h1>View Customer</h1>
-        <div class="card">
+        <div class="card shadow">
             <div class="card-body">
+                <h1>View Customer</h1>
                 <h5 class="card-title">Customer Details</h5>
                 <div class="mb-3">
                     <label class="form-label"><strong>First Name</strong></label>
