@@ -19,25 +19,35 @@ class ProjectInit extends Command
      *
      * @var string
      */
-    protected $description = 'Run database migrations and seeders';
+    protected $description = 'Run Project Init';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $this->info('Starting database migrations...');
 
-        // Run migrations
-        $result = Artisan::call('migrate');
-        $this->info('Migrations completed.');
+        $this->info('Running migration and seeder...');
+        Artisan::call('migrate:refresh --seed');
+        $this->info('Running migration and seeder done.');
 
-        $this->info('Starting database seeding...');
+        $this->info('Running optimize clear...');
+        Artisan::call('optimize:clear');
+        $this->info('Running optimize clear done.');
 
-        // Run seeding
-        $result = Artisan::call('db:seed');
-        $this->info('Database seeding completed.');
+        $this->info('Running storage link...');
+        Artisan::call('storage:link');
+        $this->info('Running storage link done.');
 
+        $this->info('Running passport keys...');
+        Artisan::call('passport:keys --force');
+        $this->info('Running passport keys done.');
+
+        $this->info('Running passport client...');
         Artisan::call('passport:client', ['--personal' => true, '--no-interaction' => true]);
+        $this->info('Running passport client done.');
+
+        // migration
+        // seeder
     }
 }

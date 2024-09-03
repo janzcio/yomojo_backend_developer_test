@@ -34,45 +34,40 @@ Create a `database` file the same database name value in your `.env` file for yo
 Config your connection or create `.env.testing` file for testing.
 ```bash
 cp .env .env.testing
-
 php artisan key:generate --env=testing
 ```
 Create a `database` file the same database name value in your `.env.testing` file for your connection in testing 
 
 
-
-Run this for storage link
+### Run this to run project init
 ```bash
-php artisan storage:link
+php artisan app:project-init
 ```
 
-Run migration
-```bash
-php artisan migrate
-```
-
-Run seeder
-```bash
-php artisan db:seed
-```
 
 Run npm install for the doc UI
 ```bash
 npm install
 ```
 
+
 ### Run the project
 ```bash
 php artisan serve
 ```
-
 
 ### Run the test
 ```bash
 php artisan test
 ```
 
-### Visit the project
+### API Reference
+
+
+##### Visit the auto generated docs
 ```bash
-php artisan test
+http://127.0.0.1:8000/docs
 ```
+
+You can also import the json file to your machine 
+located in root named `postman`.
